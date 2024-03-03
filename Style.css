@@ -1,0 +1,343 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* universal default */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+
+
+ /* clear fix float */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    width: auto;
+    background-color: rgb(105, 103, 103);
+    background: radial-gradient(#263336, #000000);
+    font-size: 20px/16px;
+    
+}
+
+.container{
+    width: 100%;
+}
+    
+
+.watermark {
+    background-color: black;
+    background: radial-gradient(#263336, #000000);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    
+    
+}
+
+.watermark h1 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    
+
+ 
+}
+
+.nav {
+    
+    height: 40px;
+    overflow: hidden;
+    overflow-y: scroll;
+    line-height: 40px;
+    text-align: center;
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+
+.nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 14px 16px 16px 14px;
+    color: white;
+    
+    
+}
+
+
+  
+
+
+.nav a:hover {
+    color: orange;
+}
+
+
+/* content */
+.content{
+    width: 100%;
+    display: flex;
+    padding: 250px 50px 150px 50px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content:center;
+    gap: 70px;
+    
+}
+
+
+
+/*profil*/
+.content #profil {
+    text-align: center;
+}
+
+#profil h1, p{
+    color: white;
+    padding-bottom: 20px;
+    
+    
+}
+
+
+#profil h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    
+}
+
+#profil p {
+    font-size: 19px;
+    line-height: 25px;
+    
+}
+
+/* foto */
+.content #foto {
+    
+    justify-content: center;
+    align-items: center;
+   display: block;
+    
+    
+}
+
+ #foto img {
+    width: 300px;
+    height: 300px;
+    object-position: 0% 50%;
+}
+
+ img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-position: 0 -130px;
+    object-fit: cover;    
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+/* bio */
+.biografi{
+    margin: 50px;
+    padding-bottom: 70px;
+}
+
+.biografi h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+    justify-content:center;
+    
+    text-align:center;   
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 10px;
+    
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(219, 211, 211, 0.2);
+}
+
+.card_item{
+        background-color: rgb(37, 36, 36);
+        border-radius: 8px;
+       
+       width: inherit;
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+        padding: 10px 16px 20px;
+  }
+
+  .card .card_item:hover {
+    box-shadow: 0px 5px 10px white;
+    border: 2px solid white;
+ 
+}
+
+.card .card_item h2 {
+   
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.card ol {
+    color: white;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: justify;
+    
+}
+
+.card_item dl {
+    display: inline-block;
+    color: white;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: justify;
+}
+
+.card_item p {
+    font-size: 19px;
+    box-sizing: border-box;
+    color: white;
+    
+}
+
+
+
+
+
+
+.card_item a{
+
+    color: white;
+    text-align: center;
+    font-size: 19px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.card_item a:hover {
+    color: orange;
+}
+
+
+.checked {
+    color: orange;
+  }
+
+  .footer {
+    text-align: center;
+    width: 100%;
+    background-color:black;
+    background: linear-gradient(to top, #263336, #000000);
+  }
+
+  .copyright {
+      overflow: hidden;
+  }
+
+  .footer .copyright p {
+    color: white;
+    font-size: 17px;
+    padding-top: 20px;
+  }
+
+  

@@ -1,0 +1,169 @@
+            <!--Mengaplikasikan BELAJAR HTML dengan beberapa fitur
+            1. mengubah isi "HEAD" dengan mengedit judul.
+            2. menambahkan isi pada "BODY"
+                - membuat judul dan sub judul menggunakan "H1" dan "H2"
+                - membuat paragraf menggunakan "p"
+                - membuat hyperlink secara "INTERNAL" dan "EXTERNAL" menggunakan "a"
+                - membuat image atau gambar menggunakan "img"
+                - membuat tabel menggunakan "tr" dan "td" serta mengatur bordernya
+            -->
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Rastaman</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="https://kit.fontawesome.com/7d9c3435e9.js" crossorigin="anonymous"></script>
+                <script>
+                    function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "nav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "nav";
+                    }
+                    }
+                    </script>
+            <script>
+            $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+            
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+                } // End if
+            });
+            });
+            </script>
+                <link rel="stylesheet" href="Style.css">
+            </head>
+            
+            
+
+            <body>
+                <audio autoplay>
+                 <source src="bob marley.mp3" type="audio/mp3">   
+                </audio>
+                <div class="container">
+                    <div class="watermark cf">
+                        <h1>Curriculum Vitae</h1>
+                        
+                        
+                        
+                        <!--membuat hyperlink di page yang sama-->
+                        <div class="nav"> 
+                            
+                                <a href="#Tentang_Saya">Tentang Saya</a>
+                                
+                                <a href="#Jenjang_Pendidikan">pendidikan</a>
+                                <a href="#Jenjang_Sertifikat">Sertifikasi</a>
+                                <a href="#Kontak">Kontak</a> 
+                        </div>
+                    </div>
+
+
+                    <!--membuat isi deskripsi web beserta id untuk "hyperlink"-->
+                    <div class="content">
+                        <div id="profil">
+                            <H1 id="Tentang_Saya">Hi saya,<br>Sri Radhitya Murti Mahening</H1>
+                            <p>Saya adalah seorang pria yang penuh <br> dengan kharismatik dan memiliki jiwa seni yang expert. <br> Saya sedang mencari pekerjaan sembari memperdalam ilmu yang berada dibidang informatika.</p>
+                        </div>    
+                        <div id="foto">
+                            <img src="Saya.jpg" alt="" >
+                        </div>
+                    </div>
+                    
+                    <div class="biografi">
+                        <h1>Biografi Saya</h1>
+                    </div>
+
+
+                            <div class="card">
+                                <div class="card_item">
+
+                                    <H2 id="Jenjang_Pendidikan">Jenjang pendidikan</H2>
+                                    <div class="a">
+                                        <ol>
+                                            <li>SDN 06 Pagi, Jakarta Timur</li>
+                                            <li>SMPN 259, Jakarta Timur</li>
+                                            <li>SMK PRESTASI PRIMA, Jakarta Timur (TKJ)</li>
+                                            <li>Universitas Bina Sarana informatika, (TI) </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                    
+                                <div class="card_item">
+                                    <h2 id="Jenjang_Sertifikat">Sertifikat Keahlian</h2>
+                                    <dl>
+                                        <dt>MTCNA :</dt>
+                                        <dd>Sertifikasi yang berkaitan dengan jaringan komputer, 2021-2024</dd>
+                                        <dt>CCNAv7 :</dt>
+                                        <dd>Sertifikasi yang berkaitan dengan jaringan komputer, 2023-2025</dd>
+                                    </dl>
+                                </div>
+
+                                <div class="card_item">
+                                    <H2>Keahlian</H2>
+                                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                    <p>HTML, CSS, JavaScript</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    <p>Jaringan Komputer</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    <p>Kerjasama Tim</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                </div>
+                                
+                                <div class="card_item" id="kontakcard">
+                                    <H2 id="Kontak">Kontak Saya</H2>
+                                    <a href="https://www.instagram.com/maheniing/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
+                                    <a href="https://wa.me/+6289637306523" target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i> WhatsApp</a>
+                                    <a href="mailto:text@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i> Email</a>
+                                </div>
+
+                                </div>
+
+                        
+
+                                </div>
+                                
+                                
+
+                                <div class="footer">
+                                    <div class="copyright">
+                                    <p >2024 & Copy by Mahening</p>
+                                    </div>
+                                
+                                </div>
+                </div>
+                </body>
+                </html>
+                
+                
